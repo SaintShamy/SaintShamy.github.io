@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Bootstrap Progress Bar Example</title>
+    <style>
+        .progress-text {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bootstrap Progress Bar </h1>
+        <div style="background-color:lightpink " class="progress">
+            <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;">0%</div>
+        </div>
+        <button style="background-color:lightpink " class="btn btn-primary" onclick="setProgress(33)">Button 1 (33%)</button>
+        <button style="background-color:lightpink "class="btn btn-primary" onclick="setProgress(66)">Button 2 (66%)</button>
+        <button style="background-color:lightpink "class="btn btn-primary" onclick="setProgress(100)">Button 3 (100%)</button>
+    </div>
+
+    <script>
+        function setProgress(percentage) {
+            const progressBar = document.getElementById('progress-bar');
+            progressBar.style.width = percentage + '%';
+            progressBar.innerHTML = percentage + '%';
+        }
+    </script>
+
+</body>
+</html>
